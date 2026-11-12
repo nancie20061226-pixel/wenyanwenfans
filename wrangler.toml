@@ -1,0 +1,23 @@
+# Cloudflare Pages 项目配置（静态根目录 + Functions 接口）
+# 部署前请把 database_id 替换为 `wrangler d1 create` 返回的真实 ID；
+# R2 桶名与下面 r2_buckets 的 bucket_name 保持一致。
+
+name = "wenyanwen-cp"
+pages_build_output_dir = "."
+compatibility_date = "2025-01-01"
+
+# 访问密码与内置管理员 ID（Worker 侧读取，不下发到前端）
+[vars]
+ACCESS_PASS = "4699"
+ADMIN_UID = "hope"
+
+# D1 数据库
+[[d1_databases]]
+binding = "DB"
+database_name = "wenyanwen-cp"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# R2 图片存储
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "wenyanwen-cp-images"
