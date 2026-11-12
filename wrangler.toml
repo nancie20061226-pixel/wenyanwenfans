@@ -15,7 +15,7 @@ ADMIN_UID = "hope"
 [[d1_databases]]
 binding = "DB"
 database_name = "wenyanwen-cp"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "86816f04-04a6-4b5d-bdb3-67801cd61629"
 
 # R2 图片存储
 [[r2_buckets]]
